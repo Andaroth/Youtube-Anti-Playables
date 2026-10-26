@@ -15,6 +15,7 @@
     setInterval(function() {
         const box = Array.from(document.querySelectorAll('ytd-rich-shelf-renderer')).find(box => {
             for (let expr of [
+                // add new content inside double quotes, followed by a comma:
                 "youtube playables",
                 "jeux intégrés"
             ]) { if ((box.innerHTML || "").toString().toLowerCase().includes((expr || "").toString().toLowerCase())) return true }
